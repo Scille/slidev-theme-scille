@@ -22,3 +22,20 @@
     @apply mt-10;
   }
 }
+
+.slidev-layout h2,
+.slidev-layout h1 {
+  @apply font-bold;
+  background: linear-gradient(45deg, #4092FF, #0058CC);
+  background-clip: text;
+  color: transparent;
+}
+
+.slidev-layout h1 e,
+.slidev-layout h2 e {
+  font-style: inherit;
+  color: initial;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+}

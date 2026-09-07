@@ -39,12 +39,12 @@ const props = defineProps<{
         @apply flex flex-col justify-between items-end z-50;
     }
 
-    .subtitle {
+    h2.subtitle {
         @apply text-base font-light;
     }
 
-    .title {
-        @apply text-7xl font-bold text-no-wrap;
+    h1.title {
+        @apply text-7xl font-bold text-no-wrap text-white;
     }
 
     .logo {

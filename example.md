@@ -1,10 +1,8 @@
 ---
 theme: ./
 author: Foo bar
-title: REX Migration et portabilité
-subtitle: Python vers Rust
-info: |
-  How Parsec migrated its application from <code>Python</code> to <code>Rust</code>
+title: Sample title
+subtitle: lorem ipsum
 ---
 
 # Slidev Theme Starter
@@ -16,6 +14,12 @@ Presentation slides for developers
     Press Space for next page <carbon:arrow-right class="inline"/>
   </span>
 </div>
+
+---
+layout: summary
+---
+
+# Example summary
 
 ---
 
@@ -96,3 +100,13 @@ class: "text-center"
 # Learn More
 
 [Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+
+---
+
+# Title with emoji <e>🦊</e>
+
+You escape emoji from being colored in the title by wrapping them in `<e></e>` balise
+
+```html
+Title with emoji <e>🦊</e>
+```

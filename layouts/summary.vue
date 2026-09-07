@@ -3,6 +3,18 @@ const props = defineProps({
     strokeAccent: {
         type: String,
         default: '#000'
+    },
+    tocMinDepth: {
+        type: Number,
+        default: 1
+    },
+    tocMaxDepth: {
+        type: Number,
+        default: Infinity,
+    },
+    tocMode: {
+        type: String,
+        default: 'all'
     }
 });
 console.log(props.strokeAccent);
@@ -10,11 +22,7 @@ console.log(props.strokeAccent);
 
 <template>
     <Container2 :swirlStroke="props.strokeAccent" containerClass="flex flex-col items-center justify-center">
-        <Header class="text-4xl">
-            <slot />
-        </Header>
-        <article>
-            <slot name="content" />
-        </article>
+        <slot />
+        <Toc :minDepth="props.tocMinDepth" :maxDepth="props.tocMaxDepth" :mode="props.tocMode" />
     </Container2>
 </template>
