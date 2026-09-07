@@ -2,60 +2,60 @@
 import ParsecWithName from '../src/img/parsec-w-name.svg';
 
 const props = defineProps<{
-    frontmatter: Record<string, any>
+	frontmatter: Record<string, any>
 }>();
 </script>
 
 <template>
-    <Container1
-        swirlStroke="white"
-        slideClass="bg-gradient-to-tr from-[#4092FF] to-[#004299] color-white"
-        containerClass="flex flex-row justify-between">
-        <div class="left">
-            <header>
-                <h2 class="subtitle">{{ props.frontmatter.subtitle }}</h2>
-                <h1 class="title">{{ props.frontmatter.title }}</h1>
-            </header>
-            <span class="date"><slot name="date" /></span>
-        </div>
-        <div class="right">
-            <ParsecWithName class="logo" />
-            <div class="author">{{ props.frontmatter.author }}</div>
-        </div>
-    </Container1>
+	<Container1 swirlStroke="white" slideClass="bg-gradient-to-tr from-[#4092FF] to-[#004299] color-white"
+		containerClass="flex flex-row justify-between">
+		<div class="left">
+			<header>
+				<h2 class="subtitle">{{ props.frontmatter.subtitle }}</h2>
+				<h1 class="title">{{ props.frontmatter.title }}</h1>
+			</header>
+			<span class="date">
+				<slot name="date" />
+			</span>
+		</div>
+		<div class="right">
+			<ParsecWithName class="logo" />
+			<div class="author">{{ props.frontmatter.author }}</div>
+		</div>
+	</Container1>
 </template>
 
 <style scoped>
-    .left {
-        @apply flex flex-col z-50;
+.left {
+	@apply flex flex-col z-50;
 
-    }
+}
 
-    .left > header {
-        @apply my-auto;
-    }
+.left>header {
+	@apply my-auto;
+}
 
-    .right {
-        @apply flex flex-col justify-between items-end z-50;
-    }
+.right {
+	@apply flex flex-col justify-between items-end z-50;
+}
 
-    h2.subtitle {
-        @apply text-base font-light;
-    }
+h2.subtitle {
+	@apply text-base font-light text-white;
+}
 
-    h1.title {
-        @apply text-7xl font-bold text-no-wrap text-white;
-    }
+h1.title {
+	@apply text-7xl font-bold text-no-wrap text-white;
+}
 
-    .logo {
-        width: 6rem;
-    }
+.logo {
+	width: 6rem;
+}
 
-    .author {
-        @apply text-nowrap;
-    }
+.author {
+	@apply text-nowrap;
+}
 
-    .date {
-        @apply capitalize
-    }
+.date {
+	@apply capitalize
+}
 </style>
